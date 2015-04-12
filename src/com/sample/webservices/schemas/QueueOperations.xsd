@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://com/samples/webservices/queueservice" xmlns:queue="http://webservices.samples.com"
+	targetNamespace="http://com/samples/webservices/queueservice" elementFormDefault="qualified">
+
+	<xsd:element name="PushRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="firstInt" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondInt" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="PushResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="status" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="PopResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="elements" type="xsd:integer" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>  
